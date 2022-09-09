@@ -77,7 +77,7 @@ def NESTSelected():
             button_exploreDOCxNEST.configure(bg='red3')
             return
         try:
-            enrollmentletterNEST = filedialog.askopenfilename(parent=NESTWindow, initialdir = "",title = "Select file",filetypes = (("DOCx","*docx"),))
+            enrollmentletterNEST = filedialog.askopenfilename(parent=NESTWindow, initialdir = "",title = "Select file",filetypes = (("all files","*.*"),))
             filename0NEST = Path(enrollmentletterNEST).stem 
             labelfileopnedDocxNEST.configure(text="File To Be Sent: "+filename0NEST)
         except:
@@ -123,9 +123,9 @@ def NESTSelected():
             button_exploreDOCxNEST.configure(bg='red3')
             button_sendNEST.configure(bg='red3')
             NESTWindow.update()
-    label_file_explorerNEST = Label(NESTWindow,text = "Original Factory Shop Email Sender - By Nick",width = 100, height = 4,fg = "white",bg = 'RoyalBlue4', font=('Times', 13))
+    label_file_explorerNEST = Label(NESTWindow,text = "Email Sender - By Nick",width = 100, height = 4,fg = "white",bg = 'RoyalBlue4', font=('Times', 13))
     button_exploreExcelNEST = Button(NESTWindow,text = "Select Excel File for Sending",bg = 'red3',width = 30, height = 2,command = NestExcelFile, font=('Times', 15, 'bold'), fg = "yellow2")
-    button_exploreDOCxNEST = Button(NESTWindow,text = "Select NEST template file to be Sent",bg = 'red3',width = 30, height = 2,command = SelectNESTDocx, font=('Times', 15, 'bold'), fg = "yellow2")
+    button_exploreDOCxNEST = Button(NESTWindow,text = "Select file to be Sent",bg = 'red3',width = 30, height = 2,command = SelectNESTDocx, font=('Times', 15, 'bold'), fg = "yellow2")
     button_exitNEST = Button(NESTWindow,text = "Exit",bg = 'snow4',width = 30,height = 2,command = sys.exit, font=('Times', 15, 'bold'), fg = "black")
     button_sendNEST = Button(NESTWindow,text = "Send",bg = 'red3',width = 30,height = 2,command = SendNEST, font=('Times', 15, 'bold'), fg = "yellow2")
     labelERRORsfoRNEST = Label(NESTWindow,text = "",width = 75, height = 2,fg = "red",bg = 'RoyalBlue4', font=('Times', 16))
@@ -152,7 +152,7 @@ def NESTSelected():
     NESTWindow.mainloop()   
 Labelfill = Label(MainWindow, width = 30, height = 3,bg = 'RoyalBlue4')
 Labelfill1 = Label(MainWindow, width = 30, height = 3,bg = 'RoyalBlue4')
-NESTWindowButton = Button(MainWindow,text = "Send NEST files",bg = 'RoyalBlue1',width = 30,height = 2, font=('Times', 15, 'bold'), fg = "yellow2",command = NESTSelected) #command = P45Selected
+NESTWindowButton = Button(MainWindow,text = "Send files",bg = 'RoyalBlue1',width = 30,height = 2, font=('Times', 15, 'bold'), fg = "yellow2",command = NESTSelected) #command = P45Selected
 Labelfill.pack()
 Labelfill1.pack()
 NESTWindowButton.pack()
